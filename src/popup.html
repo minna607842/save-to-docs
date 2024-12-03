@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Save to Google Docs</title>
+  <style>
+    body { 
+      width: 300px; 
+      padding: 15px; 
+      font-family: Arial, sans-serif;
+    }
+    button { 
+      width: 100%; 
+      padding: 8px;
+      margin: 5px 0;
+    }
+    input {
+      width: 95%;
+      padding: 8px;
+      margin: 5px 0;
+    }
+    .error {
+      color: red;
+      font-size: 12px;
+    }
+    .reset-button {
+      margin-top: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div id="mainView">
+    <button id="saveButton">Save to Docs</button>
+    <button id="resetUrlsButton" class="reset-button">URL履歴をリセット</button>
+  </div>
+  <div id="setupView" style="display: none;">
+    <h3>初期設定</h3>
+    <div>
+      <p>既存のドキュメントIDを入力：</p>
+      <input type="text" id="docIdInput" placeholder="Document IDを入力">
+      <button id="setupButton">設定を保存</button>
+    </div>
+    <div style="margin: 15px 0; text-align: center;">または</div>
+    <div>
+      <button id="createNewDoc">新規ドキュメントを作成</button>
+    </div>
+    <div id="errorText" class="error"></div>
+  </div>
+  <!-- この部分が重要 -->
+  <script src="popup.js"></script>
+</body>
+</html>
